@@ -24,5 +24,24 @@ namespace TestApp
         {
             InitializeComponent();
         }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            // View Expense Report
+            Button clicked = (Button)sender;
+            //ComboBox foundTextBox = UIHelper.FindChild<TextBox>(Application.Current.MainWindow, "myTextBoxName");
+
+            var myCombo = (ComboBox)this.FindName("myComboBox");
+            var myLabel = (Label)this.FindName("myLabel");
+            if (myCombo.SelectedValue.ToString() == "English")
+            {
+                myLabel.Content = "Hello World";
+            }
+            else
+            {
+                myLabel.Content = "Hola Mundo";
+                //myLabel.Content = myCombo.SelectedValue.ToString();
+            }
+        }
     }
 }

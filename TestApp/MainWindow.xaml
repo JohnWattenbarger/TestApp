@@ -5,8 +5,63 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:TestApp"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
-    <Grid>
-        
+        Title="Hello World" Height="450" Width="800">
+    <Grid Margin="0,0,5.2,-17.2">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="Auto" />
+            <ColumnDefinition Width="*" />
+        </Grid.ColumnDefinitions>
+
+        <Grid.RowDefinitions>
+            <RowDefinition Height = "*" />
+            <RowDefinition Height = "*" />
+            <RowDefinition Height = "*" />
+        </Grid.RowDefinitions>
+
+            <Grid Grid.Row="1" Grid.Column="1" HorizontalAlignment="Center">
+
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*" />
+                </Grid.ColumnDefinitions>
+
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*" />
+                    <RowDefinition Height = "*" />
+                    <RowDefinition Height = "*" />
+                    <RowDefinition Height = "*" />
+                    <RowDefinition Height="*" />
+                </Grid.RowDefinitions>
+
+                <Label Grid.Column="0" Grid.Row="0" HorizontalAlignment="Center" Name="myLabel">
+                    Hello World
+                </Label>
+
+                <StackPanel Grid.Column="0" Grid.Row ="2" Orientation="Horizontal" >
+                    <Label Grid.Row="0" Grid.Column="0">Language</Label>
+
+                    <ComboBox Grid.Row="0" Grid.Column="1" Name="myComboBox" SelectedValuePath="Content">
+                        <ComboBoxItem IsSelected="True">English</ComboBoxItem>
+                        <ComboBoxItem>Spanish</ComboBoxItem>
+                    </ComboBox>
+                </StackPanel>
+
+                <Grid Grid.Column="0" Grid.Row ="4">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="*" />
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="*" />
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto" />
+                    </Grid.RowDefinitions>
+
+                    <Button Grid.Column="1" Grid.Row="0" Click="Button_Click">Ok</Button>
+                    <Button Grid.Column="3" Grid.Row="0">Cancel</Button>
+                </Grid>
+            </Grid>
     </Grid>
 </Window>
